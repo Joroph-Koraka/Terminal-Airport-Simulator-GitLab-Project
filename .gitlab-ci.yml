@@ -1,0 +1,23 @@
+---
+stages:
+  - Static Analysis
+
+codespell:
+  stage: Static Analysis
+  image: gitlab.cs.wallawalla.edu:5050/cs_department/docker-images/linters
+  script:
+    - codespell -f
+
+clang-format:
+  stage: Static Analysis
+  image: gitlab.cs.wallawalla.edu:5050/cs_department/docker-images/linters
+  script:
+    - ./.gitlab/format.sh
+
+test_compile:
+  stage: Static Analysis
+  image: gitlab.cs.wallawalla.edu:5050/cs_department/docker-images/cpp
+  script:
+    - make compile
+    - make clean
+    - make compile DRIVER=src/test_driver.cpp
