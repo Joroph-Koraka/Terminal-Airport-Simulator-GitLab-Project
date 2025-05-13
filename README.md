@@ -1,5 +1,7 @@
 # CPTR 142: Project III
 
+### CRITICAL: This is an imported GitLab Project, as of right now, I do not know how to get it to work outside, will update this README when solved.
+
 Add information about your project.
 Such as detailed descriptions, known bugs and user operation instructions.
 This is the file a user will first look at when attempting to run your program.
